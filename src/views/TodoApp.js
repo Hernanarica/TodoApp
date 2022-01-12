@@ -108,7 +108,8 @@ function TodoApp() {
 										<span className={task.done ? 'font-medium text-lg line-through' : 'font-medium text-lg'}>{ task.description }</span>
 										<div className="flex flex-col gap-2 md:flex-row">
 											{ task.done && (
-												<button className="bg-green-600 text-white w-32 p-2 rounded font-medium text-center">
+												<button className="bg-green-600 text-white w-32 p-2 rounded font-medium text-center"
+												        onClick={ () => handleComplete(task.id) }>
 													<CheckIcon className="h-6 mx-auto" />
 												</button>
 											) }
